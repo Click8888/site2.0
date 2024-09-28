@@ -1,0 +1,532 @@
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #352f2f;
+    color: #d8a1a1;
+}
+
+/*---------header---------*/
+
+header{
+    border-bottom: 4px solid #181212;
+    box-shadow: 0px 0 20px #33acac;
+    background-color: #352f2f;
+    line-height: 1.5;
+    
+}
+
+.header-container {
+  padding: 1.5rem 50px;
+  position: relative;
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  justify-content:center;
+}
+
+/*Добавление отступа снизу двигая блоки на приемлемую дистанцию*/
+
+.main-content {
+  margin-bottom: 4rem;
+}
+
+/*Контейнер, который задаёт ширину блока где содержится весь контент и небольшой дизайн*/
+.container{
+  max-width: 970px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+.container id{
+  margin-top: 3rem;
+}
+.topic {
+  margin-bottom: 4rem;
+}
+
+/*Для фотографий*/
+img.lazy {
+  max-width: 100%;
+  height: auto;
+  background-color: #D3D3D3;
+}
+
+/*Тоже для фотографий, но уже для адаптивного размера относительно размера окна*/
+.img-adaptive-size{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-adaptive-size-2{
+  max-width: 30%;
+  height: auto;
+  align-items: center;
+}
+
+/*Выставляет текст по центру*/
+.text-center{
+  text-align: center;
+}
+
+/*выделяет в блоке текст жёлтым цветом*/
+.mark{
+  color: rgba(247, 223, 14, 0.8);
+}
+
+/*Увеличение шрифта*/
+.bigger-text{
+  font-size: 25px;
+  list-style: none;
+}
+
+/*Задаём дизайн нашим табличкам*/
+.nes-table.is-dark{
+  color: #d8a1a1;
+  background-color: #352f2f;
+
+}
+.nes-table.is-dark::before{
+  position:relative;
+  color: #d8a1a1;
+  background-color: #352f2f;
+
+}
+.nes-table.is-dark.is-bordered {
+  border-image-repeat:repeat;
+
+}
+
+/*Тоже использовалосб в табличках, только уже изменяя текст на определённый цвет*/
+.in-table-plus{
+  color:#0a831a;
+}
+
+.in-table-minus{
+  color:#aa2706;
+}
+
+/*Блок для фотографий, который даёт отступ сверху и ставит по центру*/
+section.showcase {
+  margin-top: 4.5rem;
+  align-items: center;
+}
+
+section.showcase > section.nes-container {
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+/*Отступ между видео*/
+.ots{
+  margin-bottom: 3.5rem;
+}
+
+/*Sidebar*/
+
+/**
+ * Переключаемая боковая панель навигации
+ * выдвигающаяся по клику слева
+ */
+
+ .navi {
+  /*  ширна произвольная, не стесняйтесь экспериментировать */
+  width: 320px;
+  min-width: 320px;
+  /* фиксируем и выставляем высоту панели на максимум */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  /* сдвигаем (прячем) панель относительно левого края страницы */
+  left: -320px;
+  /* внутренние отступы */
+  padding: 15px 20px;
+  /* плавный переход смещения панели */
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  transition: left 0.3s;
+  /* определяем цвет фона панели */
+  color: #d8a1a1;
+  background:#181212;
+  /* поверх других элементов */
+  z-index: 2000;
+}
+
+
+/**
+* Кнопка переключения панели
+* тег <label>
+*/
+
+.navi-toggle {
+  /* абсолютно позиционируем */
+  position: absolute;
+  /* относительно левого края панели */
+  left: 320px;
+  /* отступ от верхнего края панели */
+  top: 1em;
+  /* внутренние отступы */
+  padding: 0.5em;
+  /* определяем цвет фона переключателя
+   * чаще вчего в соответствии с цветом фона панели
+  */
+  background: inherit;
+  /* цвет текста */
+  color: #d8a1a1;
+  /* вид курсора */
+  cursor: pointer;
+  /* размер шрифта */
+  font-size: 1.2em;
+  line-height: 1;
+  /* всегда поверх других элементов страницы */
+  z-index: 2001;
+  /* анимируем цвет текста при наведении */
+  -webkit-transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  transition: color .25s ease-in-out;
+}
+
+
+/* определяем текст кнопки 
+* символ Unicode (TRIGRAM FOR HEAVEN)
+*/
+
+.navi-toggle:after {
+  content: '\2630';
+  text-decoration: none;
+}
+
+
+/* цвет текста при наведении */
+
+.navi-toggle:hover {
+  color: #d8a1a1;
+  border-color: #181212;
+  
+}
+
+
+/**
+* Скрытый чекбокс (флажок)
+* невидим и недоступен :)
+* имя селектора атрибут флажка
+*/
+
+[id='navi-toggle'] {
+  position: absolute;
+  display: none;
+}
+
+
+/**
+* изменение положения переключателя 
+* при просмотре на мобильных устройствах
+* когда навигация раскрыта, распологаем внутри панели
+*/
+
+[id='navi-toggle']:checked ~ .navi > .navi-toggle {
+  left: auto;
+  right: 2px;
+  top: 1em;
+}
+
+
+/**
+* Когда флажок установлен, открывается панель
+* используем псевдокласс:checked
+*/
+
+[id='navi-toggle']:checked ~ .navi {
+  left: 0;
+  box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+  -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+  -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+  overflow-y: auto;
+}
+
+
+/* 
+* смещение контента страницы
+* на размер ширины панели,
+* фишка необязательная, на любителя
+*/
+
+[id='navi-toggle']:checked ~ main > article {
+  -webkit-transform: translateX(320px);
+  -moz-transform: translateX(320px);
+  transform: translateX(320px);
+}
+
+
+/*
+* изменение символа переключателя,
+* привычный крестик (MULTIPLICATION X), 
+* вы можете испльзовать любой другой значок
+*/
+
+[id='navi-toggle']:checked ~ .navi > .navi-toggle:after {
+  content: '\2715';
+}
+
+
+/**
+* профиксим баг в Android <= 4.1.2
+*/
+
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
+}
+
+
+/**
+* позаботьтимся о средних и маленьких экранах
+* мобильных устройств
+*/
+
+@media screen and (min-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html,
+  body { 
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .navi {
+    width: 100%;
+    box-shadow: none
+  }
+}
+
+
+/**
+* Формируем стиль заголовка (логотип) панели 
+*/
+
+.navi h2 {
+  width: 90%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  opacity: 0;
+  transform: scale(0.1, 0.1);
+  -ms-transform: scale(0.1, 0.1);
+  -moz-transform: scale(0.1, 0.1);
+  -webkit-transform: scale(0.1, 0.1);
+  transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  transition: opacity 0.8s, transform 0.8s;
+  -ms-transition: opacity 0.8s, -ms-transform 0.8s;
+  -moz-transition: opacity 0.8s, -moz-transform 0.8s;
+  -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+}
+
+.navi h2 a {
+  color: #dadada;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/*плавное появление заголовка (логотипа) при раскрытии панели */
+
+[id='navi-toggle']:checked ~ .navi h2 {
+  opacity: 1;
+  transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+}
+
+
+/**
+* формируем непосредственно само меню
+* используем неупорядоченный список для пунктов меню
+* прикрутим трансфомации и плавные переходы
+*/
+
+.navi > ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.navi > ul > li {
+  line-height: 2.3;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+  -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+  -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+  transition: opacity .5s .1s, transform .5s .1s;
+}
+
+[id='navi-toggle']:checked ~ .navi > ul > li {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+
+/* определяем интервалы появления пунктов меню */
+
+.navi > ul > li:nth-child(2) {
+  -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
+  transition: opacity .5s .2s, transform .5s .2s;
+}
+
+.navi > ul > li:nth-child(3) {
+  -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
+  transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.navi > ul > li:nth-child(4) {
+  -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
+  transition: opacity .5s .4s, transform .5s .4s;
+}
+
+.navi > ul > li:nth-child(5) {
+  -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
+  transition: opacity .5s .5s, transform .5s .5s;
+}
+
+.navi > ul > li:nth-child(6) {
+  -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
+  transition: opacity .5s .6s, transform .5s .6s;
+}
+
+.navi > ul > li:nth-child(7) {
+  -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
+  transition: opacity .5s .7s, transform .5s .7s;
+}
+
+
+/**
+* оформление ссылок пунктов меню
+*/
+
+.navi > ul > li > a {
+  display: inline-block;
+  position:relative;
+  padding: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  color: #dadada;
+  width: 100%;
+  text-decoration: none;
+  /* плавный переход */
+  -webkit-transition: color .5s ease, padding .5s ease;
+  -moz-transition: color .5s ease, padding .5s ease;
+  transition: color .5s ease, padding .5s ease;
+}
+
+
+/**
+* состояние ссылок меню при наведении
+*/
+
+.navi > ul > li > a:hover,
+.navi > ul > li > a:focus {
+  color: white;
+  padding-left: 15px;
+}
+
+
+/**
+* линия подчеркивания ссылок меню
+*/
+
+.navi > ul > li > a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  -webkit-transition: width 0s ease;
+  transition: width 0s ease;
+}
+
+.navi > ul > li > a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #3bc1a0;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+
+/**
+* анимируем линию подчеркивания 
+* ссылок при наведении
+*/
+
+.navi > ul > li > a:hover:before {
+  width: 0%;
+  background: #3bc1a0;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.navi > ul > li > a:hover:after {
+  width: 0%;
+  background: transparent;
+  -webkit-transition: width 0s ease;
+  transition: width 0s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer a {
+  color: #d8a1a1;
+  text-decoration: none;
+}
+
+.footer-down{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px; /* Высота блока footer */
+}
+
+/* Добавление отступа в абзацах */
+.indent{
+  text-indent: 30px;
+}
+
+/**/
+.none-mark{
+  list-style-type: none;
+}
