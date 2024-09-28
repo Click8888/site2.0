@@ -22,11 +22,6 @@ header{
   align-items: center;
   justify-content:center;
 }
-
-.header-container .nes-text {
-  margin-right: 8px;
-}
-
 /*Добавление отступа снизу двигая блоки на приемлемую дистанцию*/
 
 .main-content {
