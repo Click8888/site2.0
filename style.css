@@ -23,6 +23,9 @@ header{
   justify-content:center;
 }
 
+.nes-text{
+    margin-right: 0px;
+}
 /*Добавление отступа снизу двигая блоки на приемлемую дистанцию*/
 
 .main-content {
