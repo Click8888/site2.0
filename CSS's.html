@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <title>CSS frameworks</title>
+</head>
+<body>
+
+  <header>
+        <div class="header-container">
+            <nav role="navigation">
+                <a class="nes-text is-primary" href="/index.html">Home</a>
+                <a class="nes-text is-primary" href="/CSS's.html">CSS's</a>
+                <a class="nes-text is-primary" href="/More.html">More</a>
+            </nav>
+    </div>
+
+  </header>
+  <main>
+    <input type="checkbox" id="navi-toggle" hidden>
+
+    <nav class="navi">
+        <label for="navi-toggle" class="navi-toggle" onclick>
+        </label>
+
+        <h2 class="logo"> 
+            <a>Навигация страницы</a> 
+        </h2>
+        <ul>
+            <li><a href="#Bootstrap">1.Bootstrap</a>
+            <li><a href="#Bulma">2.Bulma</a>
+            <li><a href="#Fomantic UI">3.Fomantic UI</a>
+            <li><a href="#BlazeUI">4.Blaze UI</a>
+            <li><a href="#Materialize">5.Materialize</a> 
+        </ul>
+    </nav>
+
+    <div class="container">
+      <div id="what-is-fr">
+        <div class="main-content">
+          <section class="topic">
+            <h1 class="text-center mark">Список популярных CSS-фреймворков</h1>
+            <br>
+            <p class="indent"><h3 class="text-center">Существует большое количество различный фреймворков, но здесь мы хотим рассказать о более популярных/удобных вреймворков для приятной работы.</h3></p><br>
+          </section>
+        </div>
+      </div>
+      <div id="Bootstrap">
+    <div class="container"> <!--Начало-->
+        <section class="showcase">
+            <p class="text-center"></p>
+            <p class="title text-center"><h1 class="text-center mark">1. Bootstrap</h1></p>
+            <div class="img.lazy text-center"><img class="img-adaptive-size-2" src="/image/Bootstrap.png"></div>
+        </section><br>
+        <section class="topic">
+            <p class="indent">Bootstrap, возможно, самый популярный и хорошо известный CSS-фреймворк в мире, и так уж случилось, что он мой личный фаворит.</p>
+            <p class="indent">Как одна из лучших библиотек CSS, Bootstrap предлагает согласованную и протестированную кодовую базу, на которую вы можете положиться для получения стабильных результатов. Недостатком является то, что она оставляет мало места для гибкости. Классы Bootstrap помогают front-end разработчикам быстро добавлять стиль в свой HTML-код.</p>
+            <p class="indent">Bootstrap также хорошо документирован, что упрощает поиск ресурсов. Это один из самых популярных CSS-фреймворков, имеющий большое и активное онлайн-сообщество пользователей.</p>
+        </section>
+        <table width="98%" class="nes-table is-bordered is-dark">
+            <thead>
+              <tr>
+                <th class="text-center">Плюсы</th>
+                <th class="text-center">Минусы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="in-table-plus">Большое сообщество и поддержка</td>
+                <td class="in-table-minus">Отсутствие гибкости дизайна</td>
+              </tr>
+              <tr>
+                <td class="in-table-plus">Созданы с учетом доступности</td>
+                <td class="in-table-minus">Большие размеры файлов и увеличенное время загрузки</td>
+              </tr>
+              <tr>
+                <td class="in-table-plus">Поддерживает как SASS, так и МЕНЕЕ</td>
+                <td class="in-table-minus">Чрезмерная зависимость от классов</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="in-table-minus">Проблемы с совместимостью со старыми версиями браузера</td>
+              </tr>
+            </tbody>
+          </table>
+    </div> <!--Конец-->
+      </div>
+      <div id="Bulma">
+    <div class="container">
+        <section class="showcase">
+            <p class="text-center"></p>
+            <p class="title text-center"><h1 class="text-center mark">2. Bulma</h1></p>
+            <div class="img.lazy text-center"><img class="img-adaptive-size-2" src="/image/Bulma.png"></div>
+        </section><br>
+        <section class="topic">
+            <p class="indent">Bulma - это бесплатный CSS-фреймворк с открытым исходным кодом, основанный на Flexbox. Он был создан, чтобы предоставить современную минималистичную альтернативу другим CSS-фреймворкам.</p>
+            <p class="indent">Вместо использования классов для стилизации и верстки Bulma использует модульный подход. И это позволяет разработчикам создавать пользовательские дизайны без написания большого количества CSS-кода. Bulma также придерживается строгого подхода, основанного только на CSS, и не включает компонентов JavaScript.</p>
+            <p class="indent">Модульная конструкция Bulma делает ее более гибкой. Вы можете легко настроить ее в соответствии с вашими конкретными потребностями проекта. Она также разработана для кроссбраузерной совместимости. А еще он легкий, быстрый и оптимизирован по производительности.</p>
+        </section>
+        <table width="98%" class="nes-table is-bordered is-dark">
+            <thead>
+              <tr>
+                <th class="text-center">Плюсы</th>
+                <th class="text-center">Минусы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="in-table-plus">Высокая гибкость и настраиваемость</td>
+                <td class="in-table-minus">Небольшое сообщество разработчиков</td>
+              </tr>
+              <tr>
+                <td class="in-table-plus">Легкий и быстрый</td>
+                <td class="in-table-minus"></td>
+              </tr>
+              <tr>
+                <td class="in-table-plus">Бесклассовый и модульный дизайн</td>
+                <td class="in-table-minus"></td>
+              </tr>
+              <tr>
+                <td class="in-table-plus">Крутой курс обучения для новичков во Flexbox</td>
+                <td class="in-table-minus"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+    <div id="Fomantic UI">
+        <div class="container">
+            <section class="showcase">
+                <p class="text-center"></p>
+                <p class="title text-center"><h1 class="text-center mark">3.Fomantic UI</h1></p>
+                <div class="img.lazy text-center"><img class="img-adaptive-size-2" src="/image/FomanticUI.png"></div>
+            </section><br>
+            <section class="topic">
+                <p class="indent">Fomantic UI описывается как официальный форк сообщества Semantic-UI. Это связано с тем фактом, что он начинался как проект с открытым исходным кодом для предоставления доступа к Semantic UI, который является интерфейсным фреймворком, который больше не поддерживается.</p>
+                <p class="indent">Пользовательский интерфейс Fomantic прост в использовании и настройке и ориентирован на семантический HTML. Классы интуитивно понятны и используют синтаксис естественного языка, понятного человеку.</p>
+                <p class="indent">Он также разработан для того, чтобы быть быстрым и эффективным, а также обеспечивать поддержку специальных возможностей ARIA (доступные расширенные интернет-приложения).</p>
+            </section>
+            <table width="98%" class="nes-table is-bordered is-dark">
+                <thead>
+                  <tr>
+                    <th class="text-center">Плюсы</th>
+                    <th class="text-center">Минусы</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="in-table-plus">С открытым исходным кодом и под руководством сообщества</td>
+                    <td class="in-table-minus">Ограниченное количество документации</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Простой в использовании и настраиваемый</td>
+                    <td class="in-table-minus">Ограниченная поддержка JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Сосредоточенность на доступности</td>
+                    <td class="in-table-minus">Меньшее сообщество</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Крутой курс обучения для новичков во Flexbox</td>
+                    <td class="in-table-minus"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div><br>
+    <div id="BlazeUI">
+        <div class="container">
+            <section class="showcase">
+                <p class="text-center"></p>
+                <p class="title text-center"><h1 class="text-center mark">4.Blaze UI</h1></p>
+                <div class="img.lazy text-center"><img class="img-adaptive-size-2" src="/image/BlazeUI.png"></div>
+            </section><br>
+            <section class="topic">
+                <p class="indent">Blaze UI - это набор инструментов пользовательского интерфейса с открытым исходным кодом для быстрого создания интерфейсных приложений. Он ориентирован на масштабируемость и ремонтопригодность. Несмотря на то, что в Blaze UI небольшое сообщество разработчиков, инструментарий хорошо документирован, и с ним легко начать.</p>
+                <p class="indent">Предоставляемые компоненты пользовательского интерфейса зависят исключительно от встроенных функций браузера, а не от отдельной библиотеки или фреймворка.</p>
+            </section>
+            <table width="98%" class="nes-table is-bordered is-dark">
+                <thead>
+                  <tr>
+                    <th class="text-center">Плюсы</th>
+                    <th class="text-center">Минусы</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="in-table-plus">С открытым исходным кодом и под руководством сообщества</td>
+                    <td class="in-table-minus">Меньшее сообщество</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Это легкий и быстрый</td>
+                    <td class="in-table-minus">Ограниченная поддержка JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Сосредоточение на доступности</td>
+                    <td class="in-table-minus"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div id="Materialize">
+        <div class="container">
+            <section class="showcase">
+                <p class="text-center"></p>
+                <p class="title text-center"><h1 class="text-center mark">5.Materialize</h1></p>
+                <div class="img.lazy text-center"><img class="img-adaptive-size-2" src="/image/Materialize.png"></div>
+            </section><br>
+            <section class="topic">
+                <p class="indent">Materialize - это CSS-фреймворк, обеспечивающий современный и адаптивный дизайн для front-end веб-разработки и основанный на рекомендациях Google по Material Design.</p>
+                <p class="indent">Materialize включает в себя различные компоненты пользовательского интерфейса, такие как панели навигации, формы, карточки, кнопки и модели. Они предварительно оформлены и готовы к использованию с минимальными усилиями. Фреймворк также предоставляет компоненты JavaScript для добавления интерактивности на ваш веб-сайт.</p>
+            </section>
+            <table  width="98%" class="nes-table is-bordered is-dark">
+                <thead>
+                  <tr>
+                    <th class="text-center">Плюсы</th>
+                    <th class="text-center">Минусы</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="in-table-plus">На основе рекомендаций Google по дизайну материалов</td>
+                    <td class="in-table-minus">Большой размер файла</td>
+                  </tr>
+                  <tr>
+                    <td class="in-table-plus">Готовые компоненты пользовательского интерфейса</td>
+                    <td class="in-table-minus">Чрезмерная зависимость от JavaScript</td>
+                  </tr>
+                </tbody>
+            </table><br><br>
+        </div>
+    </div>
+
+    </div>
+      <footer>
+        <div class="footer"><hr><br>
+          <i class="nes-icon is-large heart"></i>
+          <a href="https://hepatrombin.ru/?utm_campaign=stada_gepatrombin_2024_omd&utm_source=yandex_search&utm_medium=cpc&utm_term=stada_gepatrombin_yandex_search_general_svechi|60983660&utm_content=keyword|%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%20%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B3%D0%B5%D0%BC%D0%BE%D1%80%D1%80%D0%BE%D1%8F|ad_id|10848116100|banner_id|10848116100|campaign_type|type1|campaign_id|60983660|device_type|desktop|group_id|4605934190|phrase_id|32564749697|position|2|position_type|premium|placement|none|placement_type|search|region_name|%D0%A1%D1%8B%D0%BA%D1%82%D1%8B%D0%B2%D0%BA%D0%B0%D1%80&yclid=4372396151800856575">Я устал...</a>
+          <i class="nes-icon is-large heart"></i>
+    
+        </div>
+      </footer>
+
+  </main>
+</body>
+</html>
